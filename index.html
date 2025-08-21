@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Médico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: white;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c5aa0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+        }
+        .patient-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #2c5aa0;
+            margin-bottom: 25px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section-title {
+            background: #2c5aa0;
+            color: white;
+            padding: 10px 15px;
+            margin: 0 0 15px 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .info-item {
+            display: flex;
+        }
+        .info-label {
+            font-weight: bold;
+            min-width: 120px;
+            color: #333;
+        }
+        .info-value {
+            color: #666;
+        }
+        .diagnosis {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .treatment {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            border-top: 2px solid #2c5aa0;
+            padding-top: 20px;
+        }
+        .signature-area {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .signature-box {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .signature-line {
+            border-top: 1px solid #333;
+            margin-bottom: 10px;
+            width: 200px;
+            margin: 0 auto 10px auto;
+        }
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 72px;
+            color: rgba(255, 0, 0, 0.1);
+            z-index: -1;
+            font-weight: bold;
+        }
+        @media print {
+            body { margin: 0; padding: 15px; }
+            .watermark { position: absolute; }
+        }
+    </style>
+</head>
+<body>
+    <div class="watermark"></div>
+    
+    <div class="header">
+        <div class="logo">CLÍNICA PRIVADA JUAN PABLO II</div>
+        <div class="subtitle">Servicio de Cardiología</div>
+        <div class="subtitle">Jr. Saenz Peña 124, Pucallpa - Ucayali</div>
+        <div class="subtitle">Cel: 968 665 354 | Email: info@clinicajuanpabloii.com.pe</div>
+    </div>
+
+    <h2 style="text-align: center; color: #2c5aa0; margin-bottom: 30px;">INFORME MÉDICO CARDIOLÓGICO</h2>
+
+    <div class="patient-info">
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="info-label">Paciente:</span>
+                <span class="info-value">SOI SANI LOPEZ SERRANO</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">DNI:</span>
+                <span class="info-value">76940407</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Edad:</span>
+                <span class="info-value">20 años</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Sexo:</span>
+                <span class="info-value">Masculino</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Lugar de Nacimiento:</span>
+                <span class="info-value">Contamana, Loreto</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Residencia Actual:</span>
+                <span class="info-value">Pucallpa, Ucayali</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Fecha de Consulta:</span>
+                <span class="info-value">21 de Agosto de 2025</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Historia Clínica:</span>
+                <span class="info-value">HC-2025-0891</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">MOTIVO DE CONSULTA</div>
+        <p>Paciente masculino de 20 años que acude por seguimiento de cardiopatía diagnosticada hace 7 meses, presentando episodios de palpitaciones y disnea de esfuerzo.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">ANTECEDENTES</div>
+        <p><strong>Antecedentes Personales:</strong> Cardiopatía congénita diagnosticada en enero 2025. Niega alergias medicamentosas conocidas.</p>
+        <p><strong>Antecedentes Familiares:</strong> Padre con hipertensión arterial. Madre aparentemente sana.</p>
+        <p><strong>Hábitos:</strong> No fumador, no bebedor. Actividad física limitada por su condición.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">EXAMEN FÍSICO</div>
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="info-label">Presión Arterial:</span>
+                <span class="info-value">110/70 mmHg</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Frecuencia Cardíaca:</span>
+                <span class="info-value">92 lpm</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Temperatura:</span>
+                <span class="info-value">36.8°C</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Saturación O2:</span>
+                <span class="info-value">97%</span>
+            </div>
+        </div>
+        <p><strong>Cardiovascular:</strong> Ruidos cardíacos rítmicos, soplo sistólico grado II/VI en foco mitral. No edemas en miembros inferiores.</p>
+        <p><strong>Respiratorio:</strong> Murmullo vesicular conservado en ambos campos pulmonares.</p>
+        <p><strong>Abdomen:</strong> Blando, depresible, no doloroso a la palpación.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">EXÁMENES AUXILIARES</div>
+        <p><strong>Electrocardiograma (21/08/2025):</strong> Ritmo sinusal, frecuencia 88 lpm. Eje normal. Signos de sobrecarga auricular izquierda.</p>
+        <p><strong>Ecocardiograma (11/08/2025):</strong> Ventrículo izquierdo con dimensiones normales. Fracción de eyección 60%. Insuficiencia mitral leve a moderada.</p>
+        <p><strong>Radiografía de Tórax:</strong> Silueta cardíaca levemente aumentada de tamaño. Campos pulmonares libres.</p>
+    </div>
+
+    <div class="diagnosis">
+        <div class="section-title" style="background: #856404; margin: -15px -15px 15px -15px;">DIAGNÓSTICO PRINCIPAL</div>
+        <p><strong>CIE-10: Q23.3 - Insuficiencia congénita de la válvula mitral</strong></p>
+        <p>Cardiopatía congénita: Insuficiencia mitral congénita de grado leve a moderado, estable, en paciente joven con buena tolerancia funcional.</p>
+    </div>
+
+    <div class="treatment">
+        <div class="section-title" style="background: #0c5460; margin: -15px -15px 15px -15px;">PLAN DE TRATAMIENTO</div>
+        <p><strong>Tratamiento médico:</strong></p>
+        <ul>
+            <li>Enalapril 5mg cada 12 horas</li>
+            <li>Furosemida 20mg interdiario según necesidad</li>
+            <li>Ácido acetilsalicílico 100mg diario</li>
+        </ul>
+        <p><strong>Recomendaciones:</strong></p>
+        <ul>
+            <li>Control cardiológico en 3 meses</li>
+            <li>Ecocardiograma de control en 6 meses</li>
+            <li>Evitar ejercicios de alta intensidad</li>
+            <li>Dieta hiposódica</li>
+            <li>Profilaxis antibiótica antes de procedimientos dentales</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">OBSERVACIONES</div>
+        <p>Paciente con evolución favorable. Se encuentra estable hemodinámicamente. Es importante el seguimiento periódico para evaluar progresión de la insuficiencia mitral. Se recomienda estilo de vida saludable y adherencia al tratamiento médico.</p>
+    </div>
+
+    <div class="footer">
+        <div class="signature-area">
+            <div class="signature-box">
+                <div class="signature"></div>
+                <p><strong>Dr. Carlos Alberto Mendoza Ríos</strong><br>
+                CMP: 45123 - RNE: 18456<br>
+                Especialista en Cardiología<br>
+                Clínica Privada Juan Pablo II</p>
+            </div>
+            <div class="signature-box">
+                <div class="signature"></div>
+                <p><strong></strong><br>
+                Fecha: 21 de Agosto de 2025<br>
+                Pucallpa - Ucayali</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; font-size: 12px; color: #666;">
+            <p><strong></strong></p>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>
